@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>EuroAndCents</title>
+<script>
+var hoursworked = window.prompt("How many hours worked?", "");
+  var payrate = window.prompt("What is the pay rate?", "");
+  var taxrate = window.prompt("What is the tax rate?", "");
+  payrate = parseFloat(payrate).toFixed(2);
+  taxrate = parseFloat(taxrate).toFixed(2);
+  function calculatepay()
+  {
+    var grosspay= hoursworked * payrate;
+    var taxamount= (grosspay * taxrate) / 100;
+    var netpay= grosspay - taxamount;
+    return netpay;
+  }
+
+  var netpay = calculatepay();
+
+  document.write("<h1><b>Hours Worked: " +hoursworked+ "<br></h1></b>");
+  document.write("<h1><b>Hourly payrate: " +payrate+ "<br></h1></b>");
+  document.write("<h1><b>Tax rate applied: " +taxrate+ "<br></h1></b>");
+  document.write("<h1><b>Net Pay = " +netpay+ "<br></h1></b>");
+</script>
+</head>
+</html>

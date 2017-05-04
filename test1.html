@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ 
+  <title>Currency Converter</title>
+ </head>
+ <body>
+
+
+
+ <script type="text/JavaScript">
+      
+	  
+	  function EuroToDollars() {
+		  var input = prompt("Please enter the value to be converted from Euro to Dollars", "");
+		  while (isNaN(parseFloat(input)) || (input < 0))
+		  {
+			  var input = prompt("Please enter the value to be converted from Euro to Dollars", "");
+		  }
+		  var output = input *1.09674;
+		  document.write("Exchange Rate: 1.09674"+"</br>");
+		  document.write("&#128;" + input + " is equivalent to " + "&#36;" + output);
+		  
+
+
+	  }
+
+	  EuroToDollars();
+</script>
+  
+ </body>
+</html>
